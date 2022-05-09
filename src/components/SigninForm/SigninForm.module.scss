@@ -1,0 +1,57 @@
+@import '../../scss/imports.scss';
+
+.signin {
+  width: 100%;
+  padding-top: 80px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem;
+    max-width: 600px;
+    margin-inline: auto;
+
+    &__logo {
+      width: 70px;
+      margin-inline: auto;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__subtitle {
+      text-align: center;
+      color: rgba($color: #fff, $alpha: 0.5);
+      margin-bottom: 3rem;
+    }
+
+    label {
+      font-size: 1.1rem;
+    }
+
+    input {
+      background-color: $darkAlt;
+      border: none;
+      color: $light;
+      padding: 0.8rem;
+      border-radius: $borderRadius;
+      font-size: 1.1rem;
+    }
+
+    p.error {
+      color: red;
+    }
+
+    &__password {
+      margin-bottom: 1rem;
+    }
+
+    &__submit {
+      background-color: $primary !important;
+      margin-top: 1rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../scss/imports.scss';
+
+.home {
+  height: 100vh;
+  color: $light;
+
+  &__dashboard {
+    padding: 1rem;
+    padding-top: 80px;
+    display: grid;
+    transition: 0.3s ease all;
+
+    @include breakpoint(md) {
+      padding: 2rem;
+      padding-top: 80px;
+    }
+
+    @include breakpoint(lg) {
+      padding: 4rem;
+      padding-top: 80px;
+    }
+    // grid-template-columns: repeat(auto-fit, minmax(76rem, 1fr));
+
+    &__category {
+      padding-block: 1rem 2rem;
+
+      &__title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+    }
+  }
+}

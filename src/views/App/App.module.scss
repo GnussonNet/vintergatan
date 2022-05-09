@@ -1,0 +1,81 @@
+@import '../../scss/imports.scss';
+
+.app {
+  min-height: 100vh;
+
+  &__fallback {
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    &__loader {
+      width: 4rem;
+      height: 4rem;
+      position: relative;
+      border: 0.35rem solid $dark;
+      animation: loader 3s infinite ease;
+
+      @keyframes loader {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        25% {
+          transform: rotate(180deg);
+        }
+
+        50% {
+          transform: rotate(180deg);
+        }
+
+        75% {
+          transform: rotate(360deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      &__inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: $dark;
+        animation: loader-inner 3s infinite ease-in;
+
+        @keyframes loader-inner {
+          0% {
+            height: 0%;
+          }
+
+          25% {
+            height: 0%;
+          }
+
+          50% {
+            height: 100%;
+          }
+
+          75% {
+            height: 100%;
+          }
+
+          100% {
+            height: 0%;
+          }
+        }
+      }
+    }
+
+    &__text {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Servers",
+    "icon": "server",
+    "items": [
+      {
+        "name": "Proxmox",
+        "description": "Proxmox is an open-source bla...",
+        "icon_path": "https://gnusson.net/vintergatan/assets/proxmox.png",
+        "online": true,
+        "public_url": "",
+        "local_url": "https://192.168.1.123:8006",
+        "ssh": {
+          "ip": "192.168.1.123",
+          "ssh": true,
+          "port": 22
+        }
+      },
+      {
+        "name": "Ubuntu 22.04",
+        "description": "Debian based Linux server",
+        "icon_path": "https://gnusson.net/vintergatan/assets/ubuntu.png",
+        "online": true,
+        "public_url": "https://vintergatan.io",
+        "local_url": "http://192.168.1.97",
+        "ssh": {
+          "ip": "192.168.1.97",
+          "ssh": true,
+          "port": 22
+        }
+      }
+    ]
+  },
+  {
+    "name": "Applications",
+    "icon": "hard-drive",
+    "items": [
+      {
+        "name": "Home Assistant",
+        "description": "Smart home controller",
+        "icon_path": "https://gnusson.net/vintergatan/assets/ha.png",
+        "online": true,
+        "public_url": "https://homeassistant.vintergatan.io:8443",
+        "local_url": "http://192.168.1.83:8123",
+        "ssh": {
+          "ip": "192.168.1.83",
+          "ssh": true,
+          "port": 22
+        }
+      }
+    ]
+  }
+]

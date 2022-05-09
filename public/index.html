@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <meta name="description" content="Vintergatan" />
+    <meta name="application-name" content="Vintergatan" />
+    <meta name="apple-mobile-web-app-title" content="Vintergatan" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1.0.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=1.0.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=1.0.0">
+    <link rel="manifest" href="/site.webmanifest?v=1.0.0">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=1.0.0" color="#5683ff">
+    <link rel="shortcut icon" href="/favicon.ico?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#5683ff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=1.0.0">
+    <meta name="theme-color" content="#181A1F">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" as="font" rel="stylesheet" />
+    <title>Vintergatan</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #181A1F;
+    }
+    .fallback {
+      opacity: 0;
+      font-family: 'Nunito', sans-serif;
+      width: 100%;
+      height: 100vh;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeIn 0.5s ease-in 1s forwards;
+    }
+    .loader {
+      width: 3rem;
+      height: 3rem;
+      border: 0.35rem solid #fcfcfc;
+      animation: loader 3s infinite ease;
+    }
+    .loader_inner {
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      background-color: #fcfcfc;
+      animation: loader-inner 3s infinite ease-in;
+    }
+    .text {
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 0;
+      margin-block: 2rem 0.5rem;
+      color: #fcfcfc
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(180deg);
+      }
+
+      50% {
+        transform: rotate(180deg);
+      }
+
+      75% {
+        transform: rotate(360deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes loader-inner {
+      0% {
+        height: 0%;
+      }
+
+      25% {
+        height: 0%;
+      }
+
+      50% {
+        height: 100%;
+      }
+
+      75% {
+        height: 100%;
+      }
+
+      100% {
+        height: 0%;
+      }
+    }
+  </style>
+  <body>
+    <div id="root">
+      <div class="fallback">
+        <div class="loader">
+          <div class="loader_inner"></div>
+        </div>
+        <p class="text">Loading page..</p>
+        <noscript> Your browser does not support JavaScript! </noscript>
+      </div>
+    </div>
+  </body>
+</html>
